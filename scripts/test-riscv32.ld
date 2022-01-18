@@ -32,8 +32,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-__flash = 0x80000000;
-__flash_size = 0x00200000;
-__ram = 0x80200000;
-__ram_size = 0x200000;
-__stack_size = 1k;
+__mem_addr = 0x80000000;
+__mem_size = 0x200000;
+__stack_size = 4k;

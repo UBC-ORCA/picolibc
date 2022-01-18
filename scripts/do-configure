@@ -95,7 +95,8 @@ case "$*" in
 esac
 
 # Run meson
-
+echo "$PREFIX" 1>&2
+echo "\n\n" 1>&2
 case "$PREFIX" in
     "")
 	meson setup \
@@ -110,7 +111,7 @@ case "$PREFIX" in
 	      -Dincludedir=picolibc/"$ARCH"/include \
 	      -Dlibdir=picolibc/"$ARCH"/lib \
 	      --cross-file "$CROSS" \
-	      "$PREFIX" "$@" \
+	      --prefix "$PREFIX" "$@" \
 	      "$DIR"/..
 	;;
 esac
